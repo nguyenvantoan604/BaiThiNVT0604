@@ -1,0 +1,43 @@
+@model BaiThiNVT.Models.NVTCau3
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>NVTCau3</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IDNhanVien" class="control-label">ID Nhân Viên</label>
+                <input asp-for="IDNhanVien" class="form-control" />
+                <span asp-validation-for="IDNhanVien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenNhanVien" class="control-label">Tên Nhân Viên</label>
+                <input asp-for="TenNhanVien" class="form-control" />
+                <span asp-validation-for="TenNhanVien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TuoiNhanVien" class="control-label">Tuổi</label>
+                <input asp-for="TuoiNhanVien" class="form-control" />
+                <span asp-validation-for="TuoiNhanVien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Thêm" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Về danh sách</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

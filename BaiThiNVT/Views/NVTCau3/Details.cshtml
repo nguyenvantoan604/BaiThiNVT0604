@@ -1,0 +1,39 @@
+@model BaiThiNVT.Models.NVTCau3
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>NVTCau3</h4>
+    <hr />
+    <dl class="row">
+          <dt class = "col-sm-2">
+            ID
+            @* @Html.DisplayNameFor(model => model.TenNhanVien) *@
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IDNhanVien)
+        </dd>
+        <dt class = "col-sm-2">
+            Tên Nhân Viên
+            @* @Html.DisplayNameFor(model => model.TenNhanVien) *@
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TenNhanVien)
+        </dd>
+        <dt class = "col-sm-2">
+            Tuổi
+            @* @Html.DisplayNameFor(model => model.TuoiNhanVien) *@
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TuoiNhanVien)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IDNhanVien">Sửa</a> |
+    <a asp-action="Index">Về danh sách</a>
+</div>
